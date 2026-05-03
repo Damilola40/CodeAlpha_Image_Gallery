@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #111111;
+    --bg-card: #1a1a1a;
+    --gold: #FFD700;
+    --gold-dark: #B8860B;
+    --gold-light: #FFE55C;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --glass-bg: rgba(255, 215, 0, 0.08);
+    --glass-border: rgba(255, 215, 0, 0.2);
+    --transition: all 0.3s ease;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    height: 100vh;
+}
+header {
+    background-color: var(--bg-secondary);
+    padding: 200px 20px 150px;
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+}
+header h1 {
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-primary);
+    font-size: 2.5rem;
+}
+header h1 span {
+    color: var(--gold);
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0px;
+}
+.li-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px 0;
+}
+.li-1 a {
+    display: block;
+    width: 50%;
+    text-align: center;
+    padding: 6px 15px;
+    color: var(--gold-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    position: relative; /* needed for ::after */
+}
+.li-1 a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: var(--transition);
+    transform: translateX(-50%); /* centers the underline */
+}
+.li-1 a:hover {
+    color: var(--text-secondary);
+}
+.li-1 a:hover::after {
+    width: 25%; /* expands from center on hover */
+}
+.li-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.li-2 a {
+    display: block;
+    width: 30%;
+    text-align: center;
+    margin: 0 0 30px 0;
+    padding: 6px 15px;
+    color: var(--gold-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    position: relative; /* needed for ::after */
+}
+.li-2 a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: var(--transition);
+    transform: translateX(-50%); /* centers the underline */
+}
+.li-2 a:hover {
+    color: var(--text-secondary);
+}
+.li-2 a:hover::after {
+    width: 25%; /* expands from center on hover */
+}
+
+.filter-btn {
+    margin: 0 0 30px 10px;
+    padding: 10px 20px;
+    color: var(--text-secondary);
+    background-color: var(--glass-bg);
+    border: 3px solid var(--glass-border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.filter-btn:hover {
+    background-color: var(--gold-light);
+    color: var(--gold-dark);
+}
+
+/*Responsive Styling - Navbar*/
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row; 
+        justify-content: center;
+    }
+    .li-1, .li-2 {
+        margin: 20px 0;
+    }
+    .li-1 a, .li-2 a {
+        width: auto; 
+        margin: 50px 15px; 
+        font-size: 1.2rem;
+    }
+    .filter-btn {
+        margin: 50px 50px;
+    }
+}
+
+/* Intro section styling */
+.intro {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: var(--bg-secondary);
+}
+.intro h2 {
+    color: var(--gold-light);
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+.intro p {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+.intro p span {
+
+    font-weight: bold;
+}
+ .intro .intro-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    color: var(--text-secondary);
+    background-color: var(--glass-bg);
+    border: 3px solid var(--glass-border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.intro .intro-btn a {
+    text-decoration: none;
+    color: inherit;
+}
+.intro .intro-btn:hover {
+    background-color: var(--gold-light);
+    color: var(--gold-dark);
+}
+
+/*Responsive Styling - Navbar*/
+@media (min-width: 768px) {
+    .intro {
+        padding: 150px 40px;
+    }
+    .intro h2 {
+        font-size: 2.5rem;
+    }
+    .intro p {
+        font-size: 1.1rem;
+    }
+}

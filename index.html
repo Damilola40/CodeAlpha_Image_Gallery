@@ -3,94 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Image Gallery</title>
 </head>
 <body>
     <header>
-        <div class="head">
-            <h1>Image Gallery</h1>
-            <h2>Cars</h2>
+        <h1> <span>Cars</span> - Image Gallery</h1>
+        <div class="navbar">   
             <nav>
-                <ul>
-                    <li><a href="#">Classic</a></li>
-                    <li><a href="#">Supercars</a></li>
-                    <li><a href="#">Off-road</a></li>
-                    <li><a href="#">Concept Cars</a></li>
-                    <li><a href="#">Electric</a></li>
-                </ul>
+                <div class="li-1">
+                    <a href="#classic">Classic</a>
+                    <a href="#supercar">Supercars</a>
+                    <a href="#off-road">Off-road</a>
+                 </div>
+                <div class="li-2">
+                    <a href="#concept">Concept Cars</a>
+                    <a href="#racing">Racing</a>
+                    <button class="filter-btn"><i class="fa-solid fa-filter"></i> Filter</button>
+                </div>
             </nav>
+                   
         </div>
     </header>
-    <section class="intro">
-        <p>
-            <span>Cars</span> are more than machines — they are expressions of engineering, culture, and human ambition. 
-            From timeless classics to cutting-edge concepts, every car tells a story. Explore the collection.
-        </p>
-    </section>
-    <section class="gallery">
-        <div class="classic" id="classic">
-            <h2>Classic Cars</h2>
-            <p>Timeless designs that defined an era. These are the cars that started it all.</p>
-            <div class="slideshow">
-                <div class="back"><i class="fa-solid fa-angle-left"></i></div>
-                <img src="./images/classic/1.jpg" alt="classic-1" class="slide" width="200px" height="200px">
-                <img src="./images/classic/2.jpg" alt="classic-2" class="slide" width="200px" height="200px">
-                <img src="./images/classic/3.jpg" alt="classic-3" class="slide" width="200px" height="200px">
-                <div class="back"><i class="fa-solid fa-angle-right"></i></div>
+    <div class="container">
+        <section class="intro">
+            <h2>More than Cars</h2>
+            <p>
+                <span>Cars</span> are more than machines; they are expressions of engineering, culture, and human ambition. 
+                From timeless classics to cutting-edge concepts, every car tells a story.
+            </p>
+            <button class="intro-btn"><a href="#gallery">Explore the collection.</a></button>
+        </section>
+        <section class="gallery" id="gallery">
+            <div class="classic" id="classic">
+                <h2>Classic Cars</h2>
+                <p>Timeless designs that defined an era. These are the cars that started it all.</p>
+                <div class="slideshow">
+                    <div class="back"><i class="fa-solid fa-angle-left"></i></div>
+                    <img src="./images/classic/1.jpg" alt="classic-1" class="slide" width="200px" height="200px">
+                    <img src="./images/classic/2.jpg" alt="classic-2" class="slide" width="200px" height="200px">
+                    <img src="./images/classic/3.jpg" alt="classic-3" class="slide" width="200px" height="200px">
+                    <div class="back"><i class="fa-solid fa-angle-right"></i></div>
+                </div>
+                <button class="more">See More</button>
             </div>
-            <button class="more">See More</button>
-        </div>
-        <div class="supercar" id="supercar">
-            <h2>Super Cars</h2>
-            <p>Raw power meets precision engineering. Built to push the limits of speed and performance.</p>
-            <div class="slideshow">
-                <div class="back"><i class="fa-solid fa-angle-left"></i></div>
-                <img src="./images/supercars/1.jpg" alt="supercar-1" class="slide" width="200px" height="200px">
-                <img src="./images/supercars/2.jpg" alt="supercar-2" class="slide" width="200px" height="200px">
-                <img src="./images/supercars/3.jpg" alt="supercar-3" class="slide" width="200px" height="200px">
-                <div class="back"><i class="fa-solid fa-angle-right"></i></div>
+            <div class="supercar" id="supercar">
+                <h2>Super Cars</h2>
+                <p>Raw power meets precision engineering. Built to push the limits of speed and performance.</p>
+                <div class="slideshow">
+                    <div class="back"><i class="fa-solid fa-angle-left"></i></div>
+                    <img src="./images/supercars/1.jpg" alt="supercar-1" class="slide" width="200px" height="200px">
+                    <img src="./images/supercars/2.jpg" alt="supercar-2" class="slide" width="200px" height="200px">
+                    <img src="./images/supercars/3.jpg" alt="supercar-3" class="slide" width="200px" height="200px">
+                    <div class="back"><i class="fa-solid fa-angle-right"></i></div>
+                </div>
+                <button class="more">See More</button>
             </div>
-            <button class="more">See More</button>
-        </div>
-        <div class="concept" id="concept">
-            <h2>Concept Cars</h2>
-            <p>A glimpse into the future of mobility. Where imagination meets innovation.</p>
-            <div class="slideshow">
-                <div class="back"><i class="fa-solid fa-angle-left"></i></div>
-                <img src="./images/concept-cars/1.jpg" alt="concept-1" class="slide" width="200px" height="200px">
-                <img src="./images/concept-cars/2.jpg" alt="concept-2" class="slide" width="200px" height="200px">
-                <img src="./images/concept-cars/3.jpg" alt="concept-3" class="slide" width="200px" height="200px">
-                <div class="back"><i class="fa-solid fa-angle-right"></i></div>
+            <div class="concept" id="concept">
+                <h2>Concept Cars</h2>
+                <p>A glimpse into the future of mobility. Where imagination meets innovation.</p>
+                <div class="slideshow">
+                    <div class="back"><i class="fa-solid fa-angle-left"></i></div>
+                    <img src="./images/concept-cars/1.jpg" alt="concept-1" class="slide" width="200px" height="200px">
+                    <img src="./images/concept-cars/2.jpg" alt="concept-2" class="slide" width="200px" height="200px">
+                    <img src="./images/concept-cars/3.jpg" alt="concept-3" class="slide" width="200px" height="200px">
+                    <div class="back"><i class="fa-solid fa-angle-right"></i></div>
+                </div>
+                <button class="more">See More</button>
             </div>
-            <button class="more">See More</button>
-        </div>
-        <div class="off-road" id="off-road">
-            <h2>Off-Road Cars</h2>
-            <p>No road, no problem. These machines were built to conquer any terrain.</p>
-            <div class="slideshow">
-                <div class="back"><i class="fa-solid fa-angle-left"></i></div>
-                <img src="./images/off-road/1.jpg" alt="off-road-1" class="slide" width="200px" height="200px">
-                <img src="./images/off-road/2.jpg" alt="off-road-2" class="slide" width="200px" height="200px">
-                <img src="./images/off-road/3.jpg" alt="off-road-3" class="slide" width="200px" height="200px">
-                <div class="back"><i class="fa-solid fa-angle-right"></i></div>
+            <div class="off-road" id="off-road">
+                <h2>Off-Road Cars</h2>
+                <p>No road, no problem. These machines were built to conquer any terrain.</p>
+                <div class="slideshow">
+                    <div class="back"><i class="fa-solid fa-angle-left"></i></div>
+                    <img src="./images/off-road/1.jpg" alt="off-road-1" class="slide" width="200px" height="200px">
+                    <img src="./images/off-road/2.jpg" alt="off-road-2" class="slide" width="200px" height="200px">
+                    <img src="./images/off-road/3.jpg" alt="off-road-3" class="slide" width="200px" height="200px">
+                    <div class="back"><i class="fa-solid fa-angle-right"></i></div>
+                </div>
+                <button class="more">See More</button>
             </div>
-            <button class="more">See More</button>
-        </div>
-        <div class="racing" id="racing">
-            <h2>Racing Cars</h2>
-            <p>Built for one purpose — to win. Every detail engineered for speed.</p>
-            <div class="slideshow">
-                <div class="back"><i class="fa-solid fa-angle-left"></i></div>
-                <img src="./images/racing/1.jpg" alt="racing-1" class="slide" width="200px" height="200px">
-                <img src="./images/racing/2.jpg" alt="racing-2" class="slide" width="200px" height="200px">
-                <img src="./images/racing/3.jpg" alt="racing-3" class="slide" width="200px" height="200px">
-                <div class="back"><i class="fa-solid fa-angle-right"></i></div>
+            <div class="racing" id="racing">
+                <h2>Racing Cars</h2>
+                <p>Built for one purpose — to win. Every detail engineered for speed.</p>
+                <div class="slideshow">
+                    <div class="back"><i class="fa-solid fa-angle-left"></i></div>
+                    <img src="./images/racing/1.jpg" alt="racing-1" class="slide" width="200px" height="200px">
+                    <img src="./images/racing/2.jpg" alt="racing-2" class="slide" width="200px" height="200px">
+                    <img src="./images/racing/3.jpg" alt="racing-3" class="slide" width="200px" height="200px">
+                    <div class="back"><i class="fa-solid fa-angle-right"></i></div>
+                </div>
+                <button class="more">See More</button>
             </div>
-            <button class="more">See More</button>
-        </div>
-    </section>
+        </section>
+    </div>
     <footer>
         <h4>Sources</h4>
         <div class="source">
@@ -106,15 +113,15 @@
             <h6>Pexels</h6>
         </div>
         <p>&copy;2026 Image Gallery</p>
-
+    </footer>
         <div class="lightbox" id="lightbox">
             <img src="" id="lightbox-img" alt="">
-            <p id="lightbox-desc"></p>
             <div class="lightbox-prev"><i class="fa-solid fa-angle-left"></i></div>
-            <div class="lightbox-next"><i class="fa-solid fa-angle-right"></i></div>
             <div class="play-pause"><i class="fa-solid fa-play"></i></div>
+            <div class="lightbox-next"><i class="fa-solid fa-angle-right"></i></div>
             <div class="lightbox-close"><i class="fa-solid fa-xmark"></i></div>
         </div>
-    </footer>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
