@@ -3,7 +3,6 @@
 :root {
     --bg-primary: #0a0a0a;
     --bg-secondary: #111111;
-    --bg-card: #1a1a1a;
     --gold: #FFD700;
     --gold-dark: #B8860B;
     --gold-light: #FFE55C;
@@ -29,7 +28,7 @@ header {
     background-color: var(--bg-secondary);
     padding: 200px 20px 150px;
     text-align: center;
-    border-bottom: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold-dark);
 }
 header h1 {
     margin: 10px;
@@ -65,7 +64,7 @@ nav {
     position: relative; /* needed for ::after */
 }
 .li-1 a::after {
-    content: "";
+    content: " ";
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -127,12 +126,19 @@ nav {
     transition: var(--transition);
 }
 .filter-btn:hover {
-    background-color: var(--gold-light);
-    color: var(--gold-dark);
+    background-color: var(--gold-dark);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 10px var(--glass-bg);
+
 }
 
-/*Responsive Styling - Navbar*/
 @media (min-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+}
+/*Responsive Styling - Navbar*/
+@media (min-width: 1204px) {
     nav {
         flex-direction: row; 
         justify-content: center;
@@ -142,7 +148,7 @@ nav {
     }
     .li-1 a, .li-2 a {
         width: auto; 
-        margin: 50px 15px; 
+        margin: 50px 50px; 
         font-size: 1.2rem;
     }
     .filter-btn {
@@ -155,6 +161,7 @@ nav {
     padding: 100px 20px;
     text-align: center;
     background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--gold-dark);
 }
 .intro h2 {
     color: var(--gold-light);
@@ -166,7 +173,6 @@ nav {
     font-size: 1.1rem;
 }
 .intro p span {
-
     font-weight: bold;
 }
  .intro .intro-btn {
@@ -184,8 +190,9 @@ nav {
     color: inherit;
 }
 .intro .intro-btn:hover {
-    background-color: var(--gold-light);
-    color: var(--gold-dark);
+    background-color: var(--gold-dark);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 10px var(--glass-bg);
 }
 
 /*Responsive Styling - Navbar*/
@@ -199,4 +206,138 @@ nav {
     .intro p {
         font-size: 1.1rem;
     }
+}
+
+.classic,
+.supercar,
+.concept,
+.off-road,
+.racing {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--gold-dark);
+}
+.classic h2,
+.supercar h2,
+.concept h2,
+.off-road h2,
+.racing h2 {
+    color: var(--gold-light);
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+.classic p,
+.supercar p,
+.concept p,
+.off-road p,
+.racing p {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+.cards { /* for all car sections*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: min(90vw, 400px);
+    height: min(90vw, 400px);
+    margin: 10px 0 20px 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.card:hover {
+    animation: enlarge 0.3s ease forwards;
+}
+@keyframes enlarge {
+    from {transform: scale(1);}
+    to {transform: scale(1.05);}
+}
+.more {
+    margin-top: 30px;
+    padding: 10px 20px;
+    color: var(--text-secondary);
+    background-color: var(--glass-bg);
+    border: 3px solid var(--glass-border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.more a {
+    text-decoration: none;
+    color: inherit;
+}
+.more:hover {
+    background-color: var(--gold-dark);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 10px var(--glass-bg);
+}
+/*Responsive Styling - Navbar*/
+@media (min-width: 768px) {
+    .cards { /* for all car sections*/
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        width: min(90vw, 500px);
+        height: min(90vw, 500px);
+    }
+}
+@media (min-width: 1204px) {
+    .classic,
+    .supercar,
+    .concept,
+    .off-road,
+    .racing {
+        padding: 150px 40px;
+    }
+    .classic h2,
+    .supercar h2,
+    .concept h2,
+    .off-road h2,
+    .racing h2 {
+        font-size: 2.5rem;
+    }
+    .cards { /* for all car sections*/
+        display: flex;
+        flex-direction: row;
+    }
+    .card {
+        width: min(90vw, 500px);
+        height: min(90vw, 500px);
+        margin: 10px 20px 20px 20px;
+    }
+}
+
+.sources {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--gold-dark);
+}
+.sources p {
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.source {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.source-1,
+.source-2,
+.source-3 {
+    margin: 0 20px;
+}
+.source-1 a img,
+.source-2 a img,
+.source-3 a img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
 }
