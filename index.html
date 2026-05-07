@@ -20,10 +20,38 @@
                 <div class="li-2">
                     <a href="#concept">Concept Cars</a>
                     <a href="#racing">Racing</a>
-                    <button class="filter-btn"><i class="fa-solid fa-filter"></i> Filter</button>
-                </div>
+                    <button class="filter"><i class="fa-solid fa-filter"></i> Filter</button>
+                </div> 
             </nav>
-                   
+            <div class="filter-dropdown" id="filter-dropdown">
+                <button class="close"><i class="fa-solid fa-xmark"></i></button>
+                <ul>
+                    <li data-category="classic">
+                        <input type="checkbox" name="" id="filter-classic">
+                        <label for="filter-classic">Classic</label>
+                    </li>
+                    <li data-category="supercar">
+                        <input type="checkbox" name="" id="filter-supercar">
+                        <label for="filter-supercar">Supercars</label>
+                    </li>
+                    <li data-category="concept">
+                        <input type="checkbox" name="" id="filter-concept">
+                        <label for="filter-concept">Concept Cars</label>
+                    </li>
+                    <li data-category="off-road">
+                        <input type="checkbox" name="" id="filter-off-road">
+                        <label for="filter-off-road">Off-road</label>
+                    </li>
+                    <li data-category="racing">
+                        <input type="checkbox" name="" id="filter-racing">
+                        <label for="filter-racing">Racing</label>
+                    </li>
+                </ul>
+                <div class="filter-btns">
+                    <button class="apply">Apply Filters</button>
+                    <button class="reset">Reset Filters</button>
+                </div>
+            </div>
         </div>
     </header>
         <section class="intro">
@@ -85,28 +113,32 @@
                 </div>
                 <button class="more"><a href="#">See More</a></button>
         </section>
-        <section class="sources">
-            <p>All images in this gallery are sourced from reputable platforms, ensuring quality and authenticity.</p>
-            <div class="source">
-                
+        <footer class="footer">
+            <p class="declaration">All images in this gallery are sourced from reputable platforms, ensuring quality and authenticity.</p>
+            <div class="sources">
+                <div class="source">
                     <img src="images/sources/pinterest.png" alt="Pinterest">
-                    <a class="source-3" href="#">Pinterest</a>  
-                
+                    <a class="source-3" href="#">Pinterest</a>
+                </div>
+                <div class="source">
                     <img src="images/sources/pixabay.png" alt="Pixabay">
                     <a class="source-3" href="#">Pixabay</a>
-            
+                </div>
+                <div class="source">
                     <img src="images/sources/pexels.png" alt="Pexels">
-                    <a class="source-3" href="#">Pexels</a>                    
+                    <a class="source-3" href="#">Pexels</a>
+                </div>                       
             </div>
-    <footer>  
-        <p>&copy;2026 Image Gallery</p>
-    </footer>
+            <p class="copyright">&copy;2026 Image Gallery</p>
+        </footer>
         <div class="lightbox" id="lightbox">
-            <img src="" id="lightbox-img" alt="">
-            <div class="lightbox-prev"><i class="fa-solid fa-angle-left"></i></div>
-            <div class="play-pause"><i class="fa-solid fa-play"></i></div>
-            <div class="lightbox-next"><i class="fa-solid fa-angle-right"></i></div>
-            <div class="lightbox-close"><i class="fa-solid fa-xmark"></i></div>
+            <div class="close"><i class="fa-solid fa-xmark"></i></div>
+            <div class="lightbox-content">
+                <div class="nav" id="nav-prev"><i class="fa-solid fa-angle-left"></i></div>
+                <img src="" alt="lightbox-img" class="lightbox-img">
+                <div class="nav" id="nav-next"><i class="fa-solid fa-angle-right"></i></div>
+            </div>
+            <div class="slideshow-btn"><i class="fa-solid fa-play"></i></div>
         </div>
     <script src="scripts/script.js"></script>
 </body>
