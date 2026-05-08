@@ -1,26 +1,75 @@
-const image = document.querySelectorAll('.gallery img');
-const lightbox = document.querySelector('.lightbox');
-const lightboxImg = document.querySelector('.lightbox-img');
-const closeBtn = document.querySelector('.lightbox .close');
-const prevBtn = document.querySelector('#nav-prev');
-const nextBtn = document.querySelector('#nav-next');
-const slideshowBtn = document.querySelector('.slideshow-btn')
+// Filter
+const filterBtn = document.querySelector(".filter");
+const filterDropdown = document.querySelector(".filter-dropdown");
+const filterCloseBtn = document.querySelector(".close-filter");
+const applyBtn = document.querySelector(".apply-btn");
+const checkboxes = document.querySelectorAll('.filter-dropdown input[type="checkbox"]');
+const sections = document.querySelectorAll(".gallery > div");
+const resetBtn = document.querySelector(".reset-btn");
+
+filterCloseBtn.addEventListener("click", () => {
+    filterDropdown.classList.remove("active");
+})
+
+filterBtn.addEventListener("click", () => {
+    filterDropdown.classList.toggle("active");
+});
+
+applyBtn.addEventListener("click", () => {
+    const checked = [];
+    checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+            checked.push(checkbox.closest('li').dataset.category);
+        }
+    });
+
+    sections.forEach((section) => {
+        if (checked.length === 0 || checked.includes(section.id)) {
+            section.style.display = "block";
+        } else {
+            section.style.display = "none";
+        }
+    });
+
+    filterDropdown.classList.remove("active");
+});
+
+resetBtn.addEventListener("click", () => {
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = false;
+    });
+
+    sections.forEach((section) => {
+        section.style.display = "block";
+    });
+
+    filterDropdown.classList.remove("active");
+});
+
+// Lightbox
+const image = document.querySelectorAll(".gallery img");
+const lightbox = document.querySelector(".lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+const closeBtn = document.querySelector(".lightbox .close");
+const prevBtn = document.querySelector("#nav-prev");
+const nextBtn = document.querySelector("#nav-next");
+const slideshowBtn = document.querySelector(".slideshow-btn")
 
 let currentIndex = 0;
 
 // Open lightbox
 image.forEach((img, index) => {
-    img.addEventListener('click', () => {
+    img.addEventListener("click", () => {
         currentIndex = index;
         lightboxImg.src = img.src;
-        lightbox.classList.add('active');
+        lightbox.classList.add("active");
     });
 });
 
 // Close lightbox
 const closeButton = () => {
-    closeBtn.addEventListener('click', () => {
-        lightbox.classList.remove('active');
+    closeBtn.addEventListener("click", () => {
+        lightbox.classList.remove("active");
     });
 }
 image.forEach((img) => {
@@ -28,7 +77,7 @@ image.forEach((img) => {
 });
 
 // Navigate to previous image
-prevBtn.addEventListener('click', () => {
+prevBtn.addEventListener("click", () => {
     if (currentIndex > 0) {
         currentIndex--;
     } else {

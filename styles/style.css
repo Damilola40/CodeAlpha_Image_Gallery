@@ -146,7 +146,7 @@ nav {
 .filter-dropdown.active {
     display: flex;
 }
-.filter-dropdown .close {
+.filter-dropdown .close-filter {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -162,7 +162,7 @@ nav {
     cursor: pointer;
     transition: var(--transition);
 }
-.filter-dropdown .close:hover {
+.filter-dropdown .close-filter:hover {
     background-color: var(--gold-dark);
     color: var(--text-primary);
     box-shadow: 0 0 0 10px var(--glass-bg);
@@ -177,16 +177,20 @@ nav {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    border: 2px solid var(--gold-dark);
+    border: 5px solid var(--gold-dark);
     border-radius: 50%;
     cursor: pointer;
+}
+.filter-dropdown input[type="checkbox"]:checked {
+    background-color: var(--gold-dark);
+    border-color: var(--gold-light);
 }
 .filter-dropdown label {
     color: var(--text-primary);
     font-size: 1.1rem;
     cursor: pointer;
 }
-.apply, .reset {
+.apply-btn, .reset-btn {
     margin: 0 20px;
     width: 200px;
     padding: 10px 20px;
@@ -196,6 +200,13 @@ nav {
     border-radius: 10px;
     cursor: pointer;
     transition: var(--transition);
+}
+
+.apply-btn:hover, 
+.reset-btn:hover {
+    background-color: var(--gold-dark);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 10px var(--glass-bg);
 }
 
 /*Responsive Styling - Navbar*/
@@ -208,7 +219,7 @@ nav {
         width: min(90vh, 600px);
         margin-right: auto;
     }
-    .apply, .reset {
+    .apply-btn, .reset-btn {
         margin: 0 10px;
     }
 }
