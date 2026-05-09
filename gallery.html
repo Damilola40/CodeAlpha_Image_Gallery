@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Image Gallery - Gallery</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <a href="index.html" class="back-btn">← Back to Home</a>
+            <button class="filter"><i class="fa-solid fa-filter"></i> Filter</button>
+        </div>
+        <div class="filter-dropdown" id="filter-dropdown">
+                <button class="close-filter"><i class="fa-solid fa-xmark"></i></button>
+                <ul>
+                    <li data-category="classic">
+                        <input type="checkbox" name="" id="filter-classic">
+                        <label for="filter-classic">Classic</label>
+                    </li>
+                    <li data-category="supercar">
+                        <input type="checkbox" name="" id="filter-supercar">
+                        <label for="filter-supercar">Supercars</label>
+                    </li>
+                    <li data-category="concept">
+                        <input type="checkbox" name="" id="filter-concept">
+                        <label for="filter-concept">Concept Cars</label>
+                    </li>
+                    <li data-category="off-road">
+                        <input type="checkbox" name="" id="filter-off-road">
+                        <label for="filter-off-road">Off-road</label>
+                    </li>
+                    <li data-category="racing">
+                        <input type="checkbox" name="" id="filter-racing">
+                        <label for="filter-racing">Racing</label>
+                    </li>
+                </ul>
+            <div class="filter-btns">
+                <button class="apply-btn">Apply Filters</button>
+                <button class="reset-btn">Reset Filters</button>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="classic" id="classic">
+                <h2>Classic Cars</h2>
+                <p>Timeless designs that defined an era. These are the cars that started it all.</p>
+                <div class="images">
+                    <img src="./images/classic/1.jpg" alt="classic-1" class="card"  >
+                    <img src="./images/classic/2.jpg" alt="classic-2" class="card"  >
+                    <img src="./images/classic/3.jpg" alt="classic-3" class="card"  >
+                    <img src="./images/classic/4.jpg" alt="classic-4" class="card"  >
+                    <img src="./images/classic/5.jpg" alt="classic-5" class="card"  >
+                    <img src="./images/classic/6.jpg" alt="classic-6" class="card"  >
+                    <img src="./images/classic/7.jpg" alt="classic-7" class="card"  >
+                    <img src="./images/classic/8.jpg" alt="classic-8" class="card"  >
+                    <img src="./images/classic/9.jpg" alt="classic-9" class="card"  >
+                    <img src="./images/classic/10.jpg" alt="classic-10" class="card"  >
+                    <img src="./images/classic/11.jpg" alt="classic-11" class="card"  >
+                    <img src="./images/classic/12.jpg" alt="classic-12" class="card"  >
+                </div>
+                <a href="index.html" class="back-btn">← Back to Home</a>
+            </div>
+            <div class="supercar" id="supercar">
+                <h2>Super Cars</h2>
+                <p>High-performance machines that push the boundaries of speed and engineering.</p>
+                <div class="images">
+                    <img src="./images/supercars/1.jpg" alt="supercar-1" class="card"  >
+                    <img src="./images/supercars/2.jpg" alt="supercar-2" class="card"  >
+                    <img src="./images/supercars/3.jpg" alt="supercar-3" class="card"  >
+                    <img src="./images/supercars/4.jpg" alt="supercar-4" class="card"  >
+                    <img src="./images/supercars/5.jpg" alt="supercar-5" class="card"  >
+                    <img src="./images/supercars/6.jpg" alt="supercar-6" class="card"  >
+                    <img src="./images/supercars/7.jpg" alt="supercar-7" class="card"  >
+                    <img src="./images/supercars/8.jpg" alt="supercar-8" class="card"  >
+                    <img src="./images/supercars/9.jpg" alt="supercar-9" class="card"  >
+                    <img src="./images/supercars/10.jpg" alt="supercar-10" class="card"  >
+                    <img src="./images/supercars/11.jpg" alt="supercar-11" class="card"  >
+                    <img src="./images/supercars/12.jpg" alt="supercar-12" class="card"  >
+                </div>
+                <a href="index.html" class="back-btn">← Back to Home</a>
+            </div>
+            <div class="concept" id="concept">
+                <h2>Concept Cars</h2>
+                <p>Innovative designs that showcase future possibilities in automotive engineering.</p>
+                <div class="images">
+                    <img src="./images/concept-cars/1.jpg" alt="concept-1" class="card"  >
+                    <img src="./images/concept-cars/2.jpg" alt="concept-2" class="card"  >
+                    <img src="./images/concept-cars/3.jpg" alt="concept-3" class="card"  >
+                    <img src="./images/concept-cars/4.jpg" alt="concept-4" class="card"  >
+                    <img src="./images/concept-cars/5.jpg" alt="concept-5" class="card"  >
+                    <img src="./images/concept-cars/6.jpg" alt="concept-6" class="card"  >
+                    <img src="./images/concept-cars/7.jpg" alt="concept-7" class="card"  >
+                    <img src="./images/concept-cars/8.jpg" alt="concept-8" class="card"  >
+                    <img src="./images/concept-cars/9.jpg" alt="concept-9" class="card"  >
+                    <img src="./images/concept-cars/10.jpg" alt="concept-10" class="card"  >
+                    <img src="./images/concept-cars/11.jpg" alt="concept-11" class="card"  >
+                    <img src="./images/concept-cars/12.jpg" alt="concept-12" class="card"  >
+                </div>
+                <a href="index.html" class="back-btn">← Back to Home</a>
+            </div>
+            <div class="off-road" id="off-road">
+                <h2>Off-Road Cars</h2>
+                <p>Rugged vehicles designed to tackle the toughest terrains and conditions.</p>
+                <div class="images">
+                    <img src="./images/off-road/1.jpg" alt="off-road-1" class="card"  >
+                    <img src="./images/off-road/2.jpg" alt="off-road-2" class="card"  >
+                    <img src="./images/off-road/3.jpg" alt="off-road-3" class="card"  >
+                    <img src="./images/off-road/4.jpg" alt="off-road-4" class="card"  >
+                    <img src="./images/off-road/5.jpg" alt="off-road-5" class="card"  >
+                    <img src="./images/off-road/6.jpg" alt="off-road-6" class="card"  >
+                    <img src="./images/off-road/7.jpg" alt="off-road-7" class="card"  >
+                    <img src="./images/off-road/8.jpg" alt="off-road-8" class="card"  >
+                    <img src="./images/off-road/9.jpg" alt="off-road-9" class="card"  >
+                    <img src="./images/off-road/10.jpg" alt="off-road-10" class="card"  >
+                    <img src="./images/off-road/11.jpg" alt="off-road-11" class="card"  >
+                    <img src="./images/off-road/12.jpg" alt="off-road-12" class="card"  >
+                </div>
+                <a href="index.html" class="back-btn">← Back to Home</a>
+            </div>
+            <div class="racing" id="racing">
+                <h2>Racing Cars</h2>
+                <p>Precision-engineered machines built for speed and performance on the track.</p>
+                <div class="images">
+                    <img src="./images/racing/1.jpg" alt="racing-1" class="card"  >
+                    <img src="./images/racing/2.jpg" alt="racing-2" class="card"  >
+                    <img src="./images/racing/3.jpg" alt="racing-3" class="card"  >
+                    <img src="./images/racing/4.jpg" alt="racing-4" class="card"  >
+                    <img src="./images/racing/5.jpg" alt="racing-5" class="card"  >
+                    <img src="./images/racing/6.jpg" alt="racing-6" class="card"  >
+                    <img src="./images/racing/7.jpg" alt="racing-7" class="card"  >
+                    <img src="./images/racing/8.jpg" alt="racing-8" class="card"  >
+                    <img src="./images/racing/9.jpg" alt="racing-9" class="card"  >
+                    <img src="./images/racing/10.jpg" alt="racing-10" class="card"  >
+                    <img src="./images/racing/11.jpg" alt="racing-11" class="card"  >
+                    <img src="./images/racing/12.jpg" alt="racing-12" class="card"  >
+                </div>
+                <a href="index.html" class="back-btn">← Back to Home</a>
+            </div>
+        </div>
+        <div class="lightbox" id="lightbox">
+            <div class="close"><i class="fa-solid fa-xmark"></i></div>
+            <div class="lightbox-content">
+                <div class="nav" id="nav-prev"><i class="fa-solid fa-angle-left"></i></div>
+                <img src="" alt="lightbox-img" class="lightbox-img">
+                <div class="nav" id="nav-next"><i class="fa-solid fa-angle-right"></i></div>
+            </div>
+            <div class="slideshow-btn"><i class="fa-solid fa-play"></i></div>
+        </div>
+    </div>
 
+    <script src="scripts/gallery.js"></script>
+</body>
+</html>

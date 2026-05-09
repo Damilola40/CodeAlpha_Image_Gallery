@@ -1,0 +1,374 @@
+/*- Color Variables -*/
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #111111;
+    --gold: #FFD700;
+    --gold-dark: #B8860B;
+    --gold-light: #FFE55C;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --glass-bg: rgba(255, 215, 0, 0.08);
+    --glass-border: rgba(255, 215, 0, 0.2);
+    --transition: all 0.3s ease;
+}
+
+/* CSS Reset — removes default styles */
+*, *::after, *::before {
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*- Body Styling -*/
+body {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    height: 100vh;
+}
+
+/*- Container Styling -*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 50px 20px;
+}
+
+/* 'Back to home' Button Styling */
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/*- Filter Button Styling -*/
+.filter {
+    margin: 0 0 0 10px;
+    padding: 10px 20px;
+    color: var(--text-secondary);
+    background-color: var(--glass-bg);
+    border: 3px solid var(--glass-border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.filter:hover {
+    background-color: var(--gold-dark);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 10px var(--glass-bg);
+}
+
+/* Filter Dropdown Styling */
+.filter-dropdown {
+    display: none;
+    position: relative;
+    top: 100%;
+    background-color: rgba(255, 215, 0, 0.02);
+    border: 3px solid var(--glass-border);
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.filter-dropdown.active {
+    display: flex;
+}
+.filter-dropdown .close-filter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: var(--text-secondary);
+    background-color: var(--glass-bg);
+    border: 3px solid var(--glass-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.filter-dropdown .close-filter:hover {
+    background-color: var(--gold-dark);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 10px var(--glass-bg);
+}
+.filter-dropdown ul li {
+    list-style: none;
+    text-align: left;
+    margin: 10px 0;
+}
+.filter-dropdown input {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 5px solid var(--gold-dark);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.filter-dropdown input[type="checkbox"]:checked {
+    background-color: var(--gold-dark);
+    border-color: var(--gold-light);
+}
+.filter-dropdown label {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.apply-btn, .reset-btn {
+    margin: 0 20px;
+    width: 200px;
+    padding: 10px 20px;
+    color: var(--text-secondary);
+    background-color: var(--glass-bg);
+    border: 3px solid var(--glass-border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.apply-btn:hover, 
+.reset-btn:hover {
+    background-color: var(--gold-dark);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 10px var(--glass-bg);
+}
+
+/*Responsive Styling - Filter Dropdown*/
+@media (min-width: 768px) {
+    .filter-dropdown {
+        margin-left: auto;
+        width: min(90vh, 600px);
+    }
+    .apply-btn, .reset-btn {
+        margin: 0 10px;
+    }
+}
+@media (min-width: 1204px) {
+    .filter {
+        margin: 50px 50px;
+    }
+}
+
+/*- Gallery Styling -*/
+.classic, 
+.supercar,
+.concept,
+.off-road,
+.racing {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    margin: 30px 0;
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 0 20px var(--glass-border);
+}
+
+h2 {
+    color: var(--gold-light);
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+p {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+.images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+/* Responsive Styling - Gallery */
+@media (min-width: 768px) {
+    .images {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .images {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+}
+
+/* Galllery Styling - Images */
+.images img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 30px; 
+    cursor: pointer;
+}
+.images img:hover {
+    box-shadow: 0 0 15px var(--gold-light);
+    animation: enlarge 0.3s ease forwards;
+}
+@keyframes enlarge {
+    from {transform: scale(1);}
+    to {transform: scale(1.05);}
+}
+/* Responsive Styling - Images */
+@media (min-width: 768px) {
+    .images img {
+        height: 250px;
+    }
+}
+@media (min-width: 1280px) {
+    .images img{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/*- Gallery Styling - Images - Back Btn*/
+.back-btn {
+    display: inline-block; /* ✅ makes padding and margin work on <a> */
+    margin: 100px 0;
+    padding: 10px 20px;
+    color: var(--text-secondary);
+    text-decoration: none; /* ✅ removes underline */
+    background-color: var(--bg-secondary);
+    border: 3px solid var(--glass-border);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.back-btn:hover {
+    background-color: var(--gold-dark);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 10px var(--glass-border);
+}
+
+
+/* lightBox Styling*/
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.lightbox.active {
+    display: flex;
+}
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: var(--text-secondary);
+    background-color: var(--glass-bg);
+    border: 3px solid var(--glass-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.lightbox .close:hover {
+    background-color: var(--gold-dark);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 10px var(--glass-bg);
+}
+
+/* LightBox content wrapper */
+.lightbox-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+/* Main image */
+.lightbox-img {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+.lightbox-img {
+    transition: opacity 0.5s ease; /* ✅ smooth fade */
+}
+
+.lightbox-img.fade {
+    opacity: 0;
+}
+/* Navigation arrows */
+.nav {
+    padding: 20px 20px;
+    color: var(--text-secondary);
+    background-color: var(--glass-bg);
+    border: 3px solid var(--glass-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav:hover {
+    background-color: var(--gold-dark);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 10px var(--glass-bg);
+}
+
+.prev {
+    margin: 0 20px;
+}
+
+.next {
+    margin-left: 10px;
+}
+
+.slideshow-btn {
+    margin-top: 25px;
+    padding: 12px 22px;
+    color: var(--text-secondary);
+    background-color: var(--glass-bg);
+    border: 3px solid var(--glass-border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.slideshow-btn:hover {
+    background-color: var(--gold-dark);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 10px var(--glass-bg);
+}
+
+/* Responsive Design - LightBox*/
+@media (min-width: 768px) {
+    .lightbox-content {
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lightbox-content {
+        gap: 50px;
+    }
+}

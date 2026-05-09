@@ -1,4 +1,4 @@
-// Filter
+// Filter functionality
 const filterBtn = document.querySelector(".filter");
 const filterDropdown = document.querySelector(".filter-dropdown");
 const filterCloseBtn = document.querySelector(".close-filter");
@@ -44,8 +44,24 @@ resetBtn.addEventListener("click", () => {
     });
 });
 
-// Lightbox
-const image = document.querySelectorAll(".gallery img");
+// Filter gallery sections based on category passed from index.html
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+
+if (category) {
+    filterBtn.style.display = "none";
+    const sections = document.querySelectorAll(".gallery > div");
+    sections.forEach((section) => {
+        if (section.id === category) {
+            section.style.display = "block"; 
+        } else {
+            section.style.display = "none";
+        }
+    });
+}
+
+// Lightbox functionality
+const image = document.querySelectorAll(".images img");
 const lightbox = document.querySelector(".lightbox");
 const lightboxImg = document.querySelector(".lightbox-img");
 const closeBtn = document.querySelector(".lightbox .close");
@@ -94,7 +110,7 @@ nextBtn.addEventListener("click", () => {
     lightboxImg.src = image[currentIndex].src
 })
 
-// SlideShow
+// SlideShow functionality
 const playIcon = slideshowBtn.querySelector(".slideshow-btn i");
 let isPlaying = false;
 let interval;
@@ -123,4 +139,3 @@ slideshowBtn.addEventListener("click", () => {
         playIcon.classList.add("fa-play");
     }
 });
-
