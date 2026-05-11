@@ -7,14 +7,12 @@ const checkboxes = document.querySelectorAll('.filter-dropdown input[type="check
 const sections = document.querySelectorAll(".gallery > div");
 const resetBtn = document.querySelector(".reset-btn");
 
-filterCloseBtn.addEventListener("click", () => {
-    filterDropdown.classList.remove("active");
-})
-
+// Open Filter Dropdown
 filterBtn.addEventListener("click", () => {
     filterDropdown.classList.toggle("active");
 });
 
+// Apply Filter
 applyBtn.addEventListener("click", () => {
     const checked = [];
     checkboxes.forEach((checkbox) => {
@@ -34,6 +32,7 @@ applyBtn.addEventListener("click", () => {
     filterDropdown.classList.remove("active");
 });
 
+// Reset Filter
 resetBtn.addEventListener("click", () => {
     checkboxes.forEach((checkbox) => {
         checkbox.checked = false;
@@ -41,6 +40,14 @@ resetBtn.addEventListener("click", () => {
 
     sections.forEach((section) => {
         section.style.display = "block";
+    });
+});
+
+// Close Filter Dropdown
+filterCloseBtn.addEventListener("click", () => {
+    filterDropdown.classList.remove("active");
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = false;
     });
 });
 
