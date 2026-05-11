@@ -219,7 +219,7 @@ nav {
     cursor: pointer;
 }
 .apply-btn, .reset-btn {
-    margin: 0 20px;
+    margin: 10px 20px;
     width: 200px;
     padding: 10px 20px;
     color: var(--text-secondary);
@@ -275,8 +275,9 @@ nav {
     font-weight: bold;
 }
  .intro .intro-btn {
+    display: inline-block;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 20px 10px 20px;
     padding: 10px 20px;
     color: var(--text-secondary);
     background-color: var(--glass-bg);
@@ -291,8 +292,9 @@ nav {
     box-shadow: 0 0 0 10px var(--glass-bg);
 }
 .to-gallery {
+    display: inline-block;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 10px 20px;
     padding: 10px 20px;
     color: var(--text-secondary);
     background-color: var(--glass-bg);
@@ -446,7 +448,7 @@ nav {
     margin: 10px 0;
 }
 .source {
-    margin: 0 20px 20px;
+    margin: 0 20px 20px 20px;
 }
 .source img {
     width: min(90vw, 50px);
@@ -516,8 +518,8 @@ nav {
 
 /* Main image */
 .lightbox-img {
-    max-width: 80vw;
-    max-height: 80vh;
+    max-width: 70vw;
+    max-height: 70vh;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
@@ -556,6 +558,10 @@ nav {
 @media (min-width: 768px) {
     .lightbox-content {
         gap: 30px;
+    }
+    .lightbox-img {
+        max-width: 80vw;
+        max-height: 80vh;
     }
 }
 

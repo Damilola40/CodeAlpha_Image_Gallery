@@ -124,7 +124,7 @@ body {
     cursor: pointer;
 }
 .apply-btn, .reset-btn {
-    margin: 0 20px;
+    margin: 10px 20px;
     width: 200px;
     padding: 10px 20px;
     color: var(--text-secondary);
@@ -306,8 +306,8 @@ p {
 
 /* Main image */
 .lightbox-img {
-    max-width: 80vw;
-    max-height: 80vh;
+    max-width: 70vw;
+    max-height: 70vh;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
@@ -364,6 +364,10 @@ p {
 @media (min-width: 768px) {
     .lightbox-content {
         gap: 30px;
+    }
+    .lightbox-img {
+        max-width: 80vw;
+        max-height: 80vh;
     }
 }
 
