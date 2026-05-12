@@ -51,6 +51,19 @@ filterCloseBtn.addEventListener("click", () => {
     });
 })
 
+// close filter and go to section when category link is clicked
+const navLinks = document.querySelectorAll("a");
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        checkboxes.forEach((checkbox) => {
+            checkbox.checked = false;
+        });
+        sections.forEach((section) => {
+            section.style.display = "block";
+        });
+    });
+});
+
 // Lightbox
 const image = document.querySelectorAll(".gallery img");
 const lightbox = document.querySelector(".lightbox");
