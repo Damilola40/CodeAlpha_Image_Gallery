@@ -51,7 +51,7 @@ filterCloseBtn.addEventListener("click", () => {
     });
 })
 
-// close filter and go to section when category link is clicked
+// Reset filter and show all sections when a navbar link is clicked
 const navLinks = document.querySelectorAll("a");
 navLinks.forEach((link) => {
     link.addEventListener("click", () => {
